@@ -1,0 +1,20 @@
+{
+    "name": "XtoTwitter",
+    "version": "1.1.1",
+    "manifest_version": 3,
+    "description": "Chrome extension to bring back Twitter instead of X",
+    "short_name": "XtoTwitter",
+    "web_accessible_resources": [
+      {
+        "matches": ["<all_urls>"],
+        "resources": ["images/*"],
+        "use_dynamic_url": false
+      }
+    ],
+    "content_scripts": [{
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": [
+        "js/twitterish.js"
+      ]
+    }]
+  }
